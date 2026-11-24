@@ -1,0 +1,227 @@
+Found clang binary 'clang' with version 14 (from 'Debian clang version 14.0.6')
+/usr/sbin/bpftool
+/usr/sbin/bpftool
+using /usr/sbin/bpftool v7.1.0
+libbpf support: system v1.1.2
+  perf_buffer__consume support: yes
+  btf__load_from_kernel_by_id support: yes
+  btf__type_cnt support: yes
+  bpf_object__next_map support: yes
+  bpf_object__next_program support: yes
+  bpf_program__insn_cnt support: yes
+  bpf_program__type support: yes
+  bpf_program__flags support: yes
+  bpf_program__expected_attach_type support: yes
+  bpf_map_create support: yes
+  perf_buffer__new_raw support: yes
+  bpf_xdp_attach support: yes
+  bpf_map__set_autocreate support: yes
+  bpf_prog_test_run_opts support: yes
+  bpf_xdp_query support: no
+secure_getenv support: yes
+cap-ng support: no
+
+lib
+
+  libxdp
+    M4       xdp-dispatcher.c
+    CLANG    xsk_def_xdp_prog.o
+    CLANG    xsk_def_xdp_prog_5.3.o
+    CC       staticobjs/libxdp.o
+    CC       staticobjs/xsk.o
+    CLANG    xdp-dispatcher.o
+    CC       xsk_def_xdp_prog.embed.o
+    CC       xsk_def_xdp_prog_5.3.embed.o
+    CC       sharedobjs/libxdp.o
+    CC       sharedobjs/xsk.o
+    CC       xdp-dispatcher.embed.o
+    LINK     libxdp.a
+    LINK     libxdp.so.1.6.0
+    CC       test_xsk_refcnt
+    CC       test_xdp_frags
+    CC       test_link_detach
+    CC       test_xsk_umem_flags
+    CC       test_xdp_devbound
+    CC       check_kern_compat
+    CC       test_dispatcher_versions
+    CLANG    xdp_dispatcher_v1.o
+    CLANG    xdp_dispatcher_v2.o
+    CLANG    xdp_pass.o
+
+  util
+    CLANG    xdp_sample.bpf.o
+    CLANG    xdp_load_bytes.bpf.o
+    CLANG    xdpsock.bpf.o
+    GEN      xdpsock.skel.h
+    GEN      xdp_load_bytes.skel.h
+    GEN      xdp_sample.skel.h
+    CC       params.o
+    CC       logging.o
+    CC       util.o
+    CC       stats.o
+    CC       xpcapng.o
+    CC       xdp_sample.o
+    CC       xdpsock.o
+
+  testing
+    CLANG    test_long_func_name.o
+    CLANG    xdp_drop.o
+    CLANG    xdp_pass.o
+    CLANG    xdp_adjust_tail.o
+    CC       test-tool
+
+xdp-filter
+
+xdp-loader
+
+xdp-dump
+
+xdp-bench
+    CC       xdp-loader
+    CC       xdpdump
+    CLANG    xdp_redirect_basic.bpf.o
+    CLANG    xdpfilt_dny_udp.o
+    CLANG    xdpfilt_dny_tcp.o
+    CLANG    xdp_redirect_cpumap.bpf.o
+    CLANG    xdpfilt_dny_ip.o
+    CLANG    xdp_redirect_devmap.bpf.o
+    CLANG    xdpdump_bpf.o
+    CLANG    xdpdump_xdp.o
+    CLANG    xdpfilt_dny_eth.o
+    CLANG    xdp_redirect_devmap_multi.bpf.o
+    CLANG    xdpfilt_dny_all.o
+
+xdp-forward
+    CLANG    xdp_forward.bpf.o
+    CLANG    xdpfilt_alw_udp.o
+    CLANG    xdp_flowtable.bpf.o
+
+xdp-monitor
+    CLANG    xdp_basic.bpf.o
+    CLANG    xdp_monitor.bpf.o
+    CLANG    xdpfilt_alw_tcp.o
+    CLANG    xdpfilt_alw_ip.o
+    GEN      xdp_monitor.skel.h
+    CC       xdp-monitor
+    GEN      xdp_redirect_basic.skel.h
+    GEN      xdp_redirect_cpumap.skel.h
+    CLANG    xdpfilt_alw_eth.o
+    GEN      xdp_redirect_devmap.skel.h
+    GEN      xdp_redirect_devmap_multi.skel.h
+    GEN      xdp_basic.skel.h
+    CC       xdp-bench
+    CLANG    xdpfilt_alw_all.o
+    CLANG    xdp_flowtable_sample.bpf.o
+
+xdp-trafficgen
+    CLANG    xdp_trafficgen.bpf.o
+    GEN      xdp_forward.skel.h
+    GEN      xdp_flowtable.skel.h
+    GEN      xdp_flowtable_sample.skel.h
+    CC       xdp-forward
+    CC       xdp-filter
+    GEN      xdp_trafficgen.skel.h
+    CC       xdp-trafficgen
+
+lib
+
+  libxdp
+make[3]: Nothing to be done for 'all'.
+
+  util
+make[2]: Nothing to be done for 'all'.
+
+  testing
+make[2]: Nothing to be done for 'all'.
+
+xdp-filter
+make[1]: Nothing to be done for 'all'.
+
+xdp-loader
+make[1]: Nothing to be done for 'all'.
+
+xdp-dump
+make[1]: Nothing to be done for 'all'.
+
+xdp-bench
+make[1]: Nothing to be done for 'all'.
+
+xdp-forward
+make[1]: Nothing to be done for 'all'.
+
+xdp-monitor
+make[1]: Nothing to be done for 'all'.
+
+xdp-trafficgen
+make[1]: Nothing to be done for 'all'.
+
+  libxdp
+make[3]: Nothing to be done for 'all'.
+install -m 0755 -d /usr/local/include/xdp
+make -C libxdp install
+make[3]: Nothing to be done for 'all'.
+install -m 0755 -d /usr/local/share/xdp-tools/tests/libxdp
+install -m 0644 ./test-libxdp.sh /usr/local/share/xdp-tools/tests/libxdp
+install -m 0755 test_xsk_refcnt test_xdp_frags test_link_detach test_xsk_umem_flags test_xdp_devbound check_kern_compat test_dispatcher_versions /usr/local/share/xdp-tools/tests/libxdp
+install -m 0644 xdp_dispatcher_v1.o xdp_dispatcher_v2.o xdp_pass.o /usr/local/share/xdp-tools/tests/libxdp
+make -C testing install
+install -m 0755 -d /usr/local/share/xdp-tools
+install -m 0644 test_config.install.sh /usr/local/share/xdp-tools/test_config.sh
+install -m 0644 test_long_func_name.o xdp_drop.o xdp_pass.o xdp_adjust_tail.o /usr/local/share/xdp-tools/
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 -d /usr/local/share/xdp-tools
+install -m 0755 test_runner.sh setup-netns-env.sh run_tests.sh /usr/local/share/xdp-tools
+install -m 0755 test-tool /usr/local/share/xdp-tools
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdp-filter /usr/local/sbin
+install -m 0644 xdpfilt_dny_udp.o xdpfilt_dny_tcp.o xdpfilt_dny_ip.o xdpfilt_dny_eth.o xdpfilt_dny_all.o xdpfilt_alw_udp.o xdpfilt_alw_tcp.o xdpfilt_alw_ip.o xdpfilt_alw_eth.o xdpfilt_alw_all.o /usr/local/lib/bpf
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdp-filter.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdp-filter
+install -m 0644 tests/test-xdp-filter.sh /usr/local/share/xdp-tools/tests/xdp-filter
+install -m 0644 tests/common.py tests/test_basic.py tests/test_slow.py /usr/local/share/xdp-tools/tests/xdp-filter
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdp-loader /usr/local/sbin
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdp-loader.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdp-loader
+install -m 0644 tests/test-xdp-loader.sh /usr/local/share/xdp-tools/tests/xdp-loader
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdpdump /usr/local/sbin
+install -m 0644 xdpdump_bpf.o xdpdump_xdp.o /usr/local/lib/bpf
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdpdump.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdpdump
+install -m 0644 tests/test-xdpdump.sh /usr/local/share/xdp-tools/tests/xdpdump
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdp-bench /usr/local/sbin
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdp-bench.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdp-bench
+install -m 0644 tests/test-xdp-bench.sh /usr/local/share/xdp-tools/tests/xdp-bench
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdp-forward /usr/local/sbin
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdp-forward.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdp-forward
+install -m 0644 tests/test-xdp-forward.sh /usr/local/share/xdp-tools/tests/xdp-forward
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdp-monitor /usr/local/sbin
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdp-monitor.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdp-monitor
+install -m 0644 tests/test-xdp-monitor.sh /usr/local/share/xdp-tools/tests/xdp-monitor
+install -m 0755 -d /usr/local/sbin
+install -m 0755 -d /usr/local/lib/bpf
+install -m 0755 xdp-trafficgen /usr/local/sbin
+install -m 0755 -d /usr/local/share/man/man8
+install -m 0644 xdp-trafficgen.8 /usr/local/share/man/man8
+install -m 0755 -d /usr/local/share/xdp-tools/tests/xdp-trafficgen
+install -m 0644 tests/test-xdp-trafficgen.sh /usr/local/share/xdp-tools/tests/xdp-trafficgen

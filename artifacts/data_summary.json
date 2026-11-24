@@ -1,0 +1,47 @@
+{
+  "source_rows": 225711,
+  "source_labels": {
+    "0": 97686,
+    "1": 128025
+  },
+  "exact_duplicate_rows": 76822,
+  "ambiguous_rows": 1408,
+  "duplicate_rows_removed_after_ambiguity": 75424,
+  "rows_used": 148879,
+  "sample_cap": null,
+  "feature_count": 20,
+  "features": [
+    "Bwd Packet Length Mean",
+    "Bwd Packet Length Max",
+    "Bwd Packet Length Std",
+    "Destination Port",
+    "Protocol",
+    "URG Flag Count",
+    "Packet Length Mean",
+    "Average Packet Size",
+    "Packet Length Std",
+    "Min Packet Length",
+    "Max Packet Length",
+    "Packet Length Variance",
+    "min_seg_size_forward",
+    "Bwd Packet Length Min",
+    "Fwd Packet Length Mean",
+    "Fwd Packet Length Max",
+    "Total Length of Fwd Packets",
+    "Bwd IAT Total",
+    "Down/Up Ratio",
+    "Fwd Packet Length Std"
+  ],
+  "split_sizes": {
+    "train": 104215,
+    "validation": 14888,
+    "test": 29776
+  },
+  "split_positive": {
+    "train": 56843,
+    "validation": 8121,
+    "test": 16241
+  },
+  "seed": 42,
+  "split_method": "Stratified 70/10/20 after ambiguity and duplicate removal"
+}

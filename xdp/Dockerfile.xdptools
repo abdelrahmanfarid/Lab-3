@@ -1,0 +1,9 @@
+# Image for Lab 3 Task 5: the Task 4 image plus the build dependencies of
+# xdp-tools. xdp-tools itself is cloned and built inside the running
+# container by run_xdp_tools.sh, so that every installation step is logged.
+FROM localhost/xdp-lab
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      git ca-certificates gcc libc6-dev m4 pkg-config zlib1g-dev libpcap-dev \
+ && rm -rf /var/lib/apt/lists/*
